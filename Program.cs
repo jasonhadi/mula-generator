@@ -44,13 +44,6 @@ namespace mula_generator
 
             _doWork = true;
 
-            var asdf = new BsonDocument();
-            asdf["_id"] = new ObjectId();
-            asdf["action"] = "init";
-            asdf["submitted"] = DateTime.Now;
-            Console.WriteLine("done");
-            await exports.InsertOneAsync(asdf);
-
             while (_doWork)
             {
                 using (var cursor = await exports.FindAsync(filter, options))
