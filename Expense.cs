@@ -44,6 +44,7 @@ namespace mula_generator
         public bool submitted { get; set; }
         public BsonDateTime created { get; set; }
         public List<Row> row { get; set; }
+        public int receiptCount { get; set; }
     }
 
     public class Expense
